@@ -1,6 +1,11 @@
 /**
    @file
    @brief test if a function exists   
+   @remarks
+   - templates: https://stackoverflow.com/questions/274753/how-to-make-weak-linking-work-with-gcc and https://stackoverflow.com/questions/8814705/how-to-check-if-a-function-exists-in-c-c
+   - why use of "weak" works: "weak" has two meanings. (a) don't complain if this gets overridden. (b) don't complain and set it to zero if this doesn't exist at all. [https://gcc.gnu.org/legacy-ml/gcc/1999-02n/msg01219.html]
+   - VS pthreads: [https://gcc.gnu.org/bugzilla/show_bug.cgi?id=4372]
+   - introducion to how compilers 'think': [https://cseweb.ucsd.edu//~gbournou/CSE131/the_inside_story_on_shared_libraries_and_dynamic_loading.pdf]
  **/
 // #include <stdint.h> //! needed for "uint16_t": "for C, it's in stdint.h, which is introduced in C99" ... For cpp/c++: ""Use uint16_t in cstdint, which is introduced in C++11. Or define your own type."  [https://stackoverflow.com/questions/19106922/keeps-saying-uint16-is-not-declared]
 #include <stdio.h> //! needed for the c-style "printf(..)" funciton
